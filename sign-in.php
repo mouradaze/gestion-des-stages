@@ -1,8 +1,9 @@
 <?php
+error_reporting(E_ERROR | E_PARSE);
     require_once('db.inc.php');
     $email=addslashes($_POST['email']);
 	$passe=addslashes($_POST['pass']);
-    if(isset($_POST['submit'])){
+    if(isset($_POST['submit']) && isset($_POST['pass'])){
     $sql = "SELECT * FROM etudiant WHERE email = '$email' AND mdp = '$passe'";
     $rs = $db->query($sql);
     if($rs!=NULL)

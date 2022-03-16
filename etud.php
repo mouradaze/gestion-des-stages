@@ -1,5 +1,6 @@
 <?php session_start();if(!$_SESSION){
     header('location:sign-in.php');
+    error_reporting(E_ERROR | E_PARSE);
 }?>
 
 <!DOCTYPE html>
@@ -21,10 +22,10 @@
     <ol>
         <li><a href="modif.html.php">Modifier Mon Profil</a></li>
         <li><a href="stage.html.php">Ajouter Un Stage</a></li>
-        <li><a href="">Déposer La Première Version Du Rapport</a></li>
-        <li><a href="">Déposer La Version Corrigée Du Rapport</a></li>
-        <li><a href="">Déposer La Présentation</a></li>
-        <li><a href="">Déposer L’attestation De Stage Et La Fiche D’évaluation</a></li>
+        <li><a href="rap_f.html.php">Déposer La Première Version Du Rapport</a></li>
+        <li><a href="rap_f.html.php?n=2">Déposer La Version Corrigée Du Rapport</a></li>
+        <li><a href="rap_f.html.php?n=3">Déposer La Présentation</a></li>
+        <li><a href="attes.html.php">Déposer L’attestation De Stage Et La Fiche D’évaluation</a></li>
     </ol>
 </body>
 </html>

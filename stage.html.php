@@ -1,4 +1,5 @@
 <?php session_start();
+error_reporting(E_ERROR | E_PARSE);
 if(!$_SESSION){
     header('location:sign-in.php');
 }
@@ -40,10 +41,11 @@ if(!$_SESSION){
                             echo "<option value='{$r['nom']}'>{$r['nom']}</option>";
                         }   
                     ?>
-                        <option name="other" value="other" class="other">Other Option</option>
+                        
                 </select>
                 
             </div>
+            <div><input type="checkbox" name="Op" >Autres Entreprises</div>
             <div>
                 <label for="nEnc"><sup>*</sup> Nom Encadrent :</label>
                 <input type="text" name="encEN" id="" maxlength="30" required>
