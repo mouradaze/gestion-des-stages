@@ -14,8 +14,8 @@
     <?php require_once('header.php');?>
     <div>
     <form <?php if(isset($_GET['n']) && $_GET['n'] == 2)  echo "action=\"rap_ff.php\"";
-     elseif(isset($_GET['n']) && $_GET['n'] == 2) echo "action=\"rap_f.php\"";
-      else echo "action=\"Pres.php\""; ?> method="post" enctype="multipart/form-data">
+     elseif(isset($_GET['n']) && $_GET['n'] == 3) echo "action=\"pres.php\"";
+      else echo "action=\"rap_f.php\""; ?> method="post" enctype="multipart/form-data">
         <div>
             <label for="">Votre Fichier :</label>
             <input type="file" name="rap" >

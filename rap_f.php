@@ -6,7 +6,7 @@ if(isset($_POST['submit']) && isset($_FILES['rap'])){
     $uploads_dir = './rapport_f';
     move_uploaded_file($tname, $uploads_dir.'/'.$pname);
     $sql = "INSERT INTO rapport(numutil,nom) VALUES ({$_SESSION['utilisateur']['id']},'$pname')";
-    $rs = $db->exec($sql);
+    $db->exec($sql);
     header("location:etud.php");
 }
 
